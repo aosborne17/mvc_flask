@@ -20,13 +20,13 @@ def index():
         if request.form['username'] != 'AOsborne' or request.form['password'] != 'Password':
             error = 'Invalid Credentials. Please try again.'
         else:
-            return redirect(url_for('/home'))
+            return redirect(url_for('home'))
     return render_template('base.html', error=error)
 
 
 @app.route('/home')
 def home():
-    return render_template('index.html')
+    return "WE MADE IT"
 
 
 if __name__ == "__main__":
