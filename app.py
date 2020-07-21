@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, url_for, request, redirect
 
 # In order to create flask we must first create an instance of the flask class
 app = Flask(__name__)
@@ -12,20 +12,21 @@ then run the index function.
 
 # Here we are creating the web route
 # We are sending info from the controller to the 'view' part
-@app.route("/")
+@app.route('/', methods=['GET', 'POST'])
 # This method would allow the message to be displayed on the web route specified
 def index():
-    return "<h1>Welcome to MVC with Flask Project</h1>"
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'AOsborne' or request.form['password'] != 'Password':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return redirect(url_for('/home'))
+    return render_template('base.html', error=error)
 
 
-@app.route("/<username>")
-def welcome_user(username):
-    return "<h1>Welcome to the Python Flask App {} </h1>".format(username)
-
-
-# @app.route("/andrew")
-# def welcome_user():
-#     return "<h1>Welcome to the Python Flask App Andrew</h1>"
+@app.route('/home')
+def home():
+    return render_template('index.html')
 
 
 if __name__ == "__main__":

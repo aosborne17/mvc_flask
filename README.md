@@ -39,3 +39,9 @@ def welcome_user(username):
 if __name__ == "__main__":
     app.run(debug=True)
 ```
+
+
+<!--Here we are inheriting the functionalities from the base.html file-->
+<!--The block allows us to make changes to the template file, here we have added homepage-->
+
+<!--    the curly braces allows for us to write python within HTML-->
