@@ -1,10 +1,10 @@
-MVC stands for Model View Controller
+# MVC stands for Model View Controller
 
-The controller is the run file that runs our code
+## The controller is the run file that runs our code
 
-Model would be our HTML and CSS temlplates
-The controller would be our run file in our app.py
-The View would be the display of our program on a web browser
+## Model would be our HTML and CSS templates
+## The controller would be our run file in our app.py
+## The View would be the display of our program on a web browser
 
 ```from flask import Flask
 
