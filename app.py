@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, request, redirect
-
+from database.create_connection import EstablishConnection
 # In order to create flask we must first create an instance of the flask class
 app = Flask(__name__)
 
@@ -23,6 +23,11 @@ The code within this function checks to see if the credentials are correct, if s
 the user to the home page
 """
 
+""""
+Quiz, multiple choice question, 10 questions, they have a timer in which to do it
+We can then generate a feedback score for them.
+"""
+
 
 @app.route('/')
 def home():
@@ -42,9 +47,9 @@ def login():
     return render_template('login.html', error=error)
 
 
-@app.route('/question')
+@app.route('/python')
 def question():
-    return render_template('question.html')
+    return render_template('python.html')
     # return "It's time..."
 
 
