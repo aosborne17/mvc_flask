@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" class="login100-form validate-form">
+     <input class="input100" type="text" name="username" placeholder="username" value="{{
+          request.form.username }}">
+    <input class="input100" type="password" name="password" placeholder="Password" value="{{
+          request.form.password }}">
+        <input type="submit" style="height: 0px; width: 0px; border: none; padding: 0px;" hidefocus="true" />
+
+    </form>
+{% endblock content %}

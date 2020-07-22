@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
     <meta charset="UTF-8">
     <title>{% block title %} Andrew's Portfolio {% endblock title %}</title>
-    <form action="" method="post" class="login100-form validate-form">
-     <input class="input100" type="text" name="username" placeholder="username" value="{{
-          request.form.username }}">
-    <input class="input100" type="password" name="password" placeholder="Password" value="{{
-          request.form.password }}">
-        <input type="submit" style="height: 0px; width: 0px; border: none; padding: 0px;" hidefocus="true" />
-
-    </form>
+    {% block content %}
 
 </head>
 <body>
@@ -41,8 +34,7 @@
     </ul>
   </div>
 </nav>
-    <h1>HTML rendering using Flask and Python</h1>
-    <h2>Slightly smaller header</h2>
+    {% endblock %}
 <!--    the curly braces allows for us to write python within HTML-->
 
 </body>
