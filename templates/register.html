@@ -1,17 +1,22 @@
 {% extends "base.html" %}
-
 {% block content %}
     <div class="content-section">
         <form method="POST" action="">
+<!--            the hidden tag adds a cfrf token which helps with certain attacks-->
             {{form.hidden_tag() }}
             <fieldset class="form-group">
-                <div class=""form-group>
+                <legend> Join Here</legend>
+                <div class="form-group">
                     {{ form.username.label(class="form-control-label") }}
                     {{ form.username(class="form-control form-control-lg") }}
                 </div>
                 <div class="form-group">
                     {{ form.password.label(class="form-control-label") }}
                     {{ form.password(class="form-control form-control-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.confirm_password.label(class="form-control-label") }}
+                    {{ form.confirm_password.label(class="form-control form-control-lg") }}
                 </div>
             </fieldset>
                 <div class="form-group">

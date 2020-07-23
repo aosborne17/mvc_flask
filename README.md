@@ -6,6 +6,17 @@
 ## The controller would be our run file in our app.py
 ## The View would be the display of our program on a web browser
 
+
+Things to work on:
+ - Need to create a logout option, this will be done using the sessions library
+ - 
+
+
+
+
+
+
+
 ```from flask import Flask
 
 # In order to create flask we must first create an instance of the flask class
